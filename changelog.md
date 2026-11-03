@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-03, rec-mode install steps
+
+- `rec-mode/INSTRUCTIONS.md`: the line that removes recording-mode first now names `recording-mode@claude-mods-demo`, the training marketplace where recording-mode is. It named `@waraxe-claude-mods`, which never had recording-mode after the move.
+- `rec-mode/README.md`: the hotkey's example path is `~/waraxe-claude-mods/plugins/rec-mode/bin/rec`, with a note to quote a path that has a space. It pointed to the training repository's folder, which no longer has rec-mode.
+- No code changed. The training repository's lessons 0045–0047 link to this commit.
+
 ## 2026-11-03
 
 - New repository and marketplace `waraxe-claude-mods` (1.0.0), for `iWaraxe/waraxe-claude-mods` on GitHub.

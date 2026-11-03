@@ -4,10 +4,10 @@
 
 ## Install
 
-It replaces recording-mode, so remove that one first if you have it:
+It replaces recording-mode, so remove that one first if you have it. The line below is for recording-mode from the training marketplace `claude-mods-demo`; `claude plugin list` shows the full name of yours.
 
 ```bash
-claude plugin uninstall recording-mode@waraxe-claude-mods
+claude plugin uninstall recording-mode@claude-mods-demo
 claude plugin marketplace add iWaraxe/waraxe-claude-mods
 claude plugin install rec-mode@waraxe-claude-mods
 ```

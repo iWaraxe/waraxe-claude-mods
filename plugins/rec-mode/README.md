@@ -28,7 +28,7 @@ Every open chat follows within 3 seconds. A mod's sound checks the switch at the
 The desktop app can't bind a key to a slash command, so the hotkey lives in macOS instead. It works even while Zoom or another app is in front.
 
 1. Open the **Shortcuts** app and choose **File > New Shortcut**.
-2. Add the action **Run Shell Script**. Replace its text with the full path to `bin/rec` in your clone, for example `~/Downloads/waraxe-claude-mods/plugins/rec-mode/bin/rec`.
+2. Add the action **Run Shell Script**. Replace its text with the full path to `bin/rec` in your clone, for example `~/waraxe-claude-mods/plugins/rec-mode/bin/rec`. Put the path in double quotes if it has a space.
 3. Name the shortcut **Toggle REC**.
 4. Open the shortcut's details (the ⓘ button), choose **Add Keyboard Shortcut**, and press the key you want, for example ⌃⌥⌘R.
 5. Press the key once. If Shortcuts says scripts are not allowed, turn on **Shortcuts > Settings > Advanced > Allow Running Scripts** and press it again.

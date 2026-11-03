@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-04, effort-picker
+
+- New mod `effort-picker` 0.1.0: Haiku recommends an effort for each prompt, a row of buttons in the banner shows the five levels, and a question dialog takes Enter. On low, medium or high Enter applies the recommendation for that turn; on xhigh or max it keeps the level and leaves a dim line. A click on a level sends at that level and closes the dialog. It replaces the rule-based effort-picker in the training marketplace.
+- `spoken-alerts` 0.3.1: skips effort-picker's dialog, which would otherwise be spoken on every prompt.
+
 ## 2026-11-03, rec-mode install steps
 
 - `rec-mode/INSTRUCTIONS.md`: the line that removes recording-mode first now names `recording-mode@claude-mods-demo`, the training marketplace where recording-mode is. It named `@waraxe-claude-mods`, which never had recording-mode after the move.

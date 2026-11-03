@@ -4,7 +4,7 @@
     "name": "Igor Waraxe"
   },
   "metadata": {
-    "description": "Igor Waraxe's Claude Code mods: a status banner, spoken alerts and a recording mode.",
+    "description": "Igor Waraxe's Claude Code mods: a status banner, spoken alerts, a recording mode and an effort picker.",
     "version": "1.0.0"
   },
   "plugins": [
@@ -22,7 +22,7 @@
       "name": "spoken-alerts",
       "source": "./plugins/spoken-alerts",
       "description": "Speaks two alerts with Mac, OpenAI or ElevenLabs voices: when work ends, the project, the thread and what was done; when Claude asks you something, a chime, the question and the recommended option.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": {
         "name": "Igor Waraxe"
       },
@@ -33,6 +33,16 @@
       "source": "./plugins/rec-mode",
       "description": "/rec before you record or share your screen: masks keys, personal details and business figures, keeps private files closed, and silences every mod's sounds (spoken-alerts, narrator) until /rec off. A \u25cb/\u25cf REC badge shows the state and switches it.",
       "version": "0.1.1",
+      "author": {
+        "name": "Igor Waraxe"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "effort-picker",
+      "source": "./plugins/effort-picker",
+      "description": "Haiku recommends a reasoning effort for each prompt you send. A row of buttons from low to max shows it, and Enter submits: it applies the recommendation on low, medium or high, and keeps xhigh or max.",
+      "version": "0.1.0",
       "author": {
         "name": "Igor Waraxe"
       },

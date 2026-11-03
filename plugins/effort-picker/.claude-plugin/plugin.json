@@ -1,0 +1,9 @@
+{
+  "name": "effort-picker",
+  "version": "0.1.0",
+  "description": "Haiku recommends a reasoning effort for each prompt you send. A row of buttons from low to max shows it, and Enter submits: it applies the recommendation on low, medium or high, and keeps xhigh or max.",
+  "author": {
+    "name": "Igor Waraxe"
+  },
+  "license": "MIT"
+}

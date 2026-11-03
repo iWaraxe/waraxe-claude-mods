@@ -176,6 +176,8 @@ export const register: Register = (on, options) => {
   })
 
   on('tool.call', { tool: 'AskUserQuestion' }, async ($, e, next) => {
+    // effort-picker asks on every prompt, while the person is at the keyboard.
+    if (next.origin.plugin === 'effort-picker') return next(e)
     const questions = e.questions
     void ask($, at => dialogLines(at, questions)).catch(() => {})
     return next(e)

@@ -20,8 +20,9 @@ To update: `claude plugin marketplace update waraxe-claude-mods`, then `claude p
 | Plugin | Version | What it does |
 |---|---|---|
 | [`status-banner`](plugins/status-banner/README.md) | 0.3.1 | One status banner above the prompt: plan usage, the session's turn, speed, cost, cache countdown with a Keep warm button and context fill, a goal and next-step summary, and a heads-up after long turns. |
-| [`spoken-alerts`](plugins/spoken-alerts/README.md) | 0.3.0 | Speaks two alerts with Mac, OpenAI or ElevenLabs voices: when work ends, the project, the thread and what was done; when Claude asks you something, a chime, the question and the recommended option. |
+| [`spoken-alerts`](plugins/spoken-alerts/README.md) | 0.3.1 | Speaks two alerts with Mac, OpenAI or ElevenLabs voices: when work ends, the project, the thread and what was done; when Claude asks you something, a chime, the question and the recommended option. |
 | [`rec-mode`](plugins/rec-mode/README.md) | 0.1.1 | `/rec` before you record or share your screen: masks keys, personal details and business figures, keeps private files closed, and silences every mod's sounds until `/rec off`. A ○/● REC badge shows the state and switches it. |
+| [`effort-picker`](plugins/effort-picker/README.md) | 0.1.0 | Haiku recommends a reasoning effort for each prompt you send. A row of buttons from low to max shows it, and Enter submits: it applies the recommendation on low, medium or high, and keeps xhigh or max. |
 
 Each folder holds a README (commands and settings), `INSTRUCTIONS.md` (install and remove), `EXPLANATION.md` (how it works) and its LICENSE.
 

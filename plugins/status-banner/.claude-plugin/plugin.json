@@ -1,0 +1,37 @@
+{
+  "name": "status-banner",
+  "version": "0.3.1",
+  "description": "One status banner above the prompt: plan usage, the session's turn, speed, cost, cache countdown with a Keep warm button and context fill, a goal and next-step summary, and a heads-up after long turns.",
+  "author": {
+    "name": "Igor Waraxe"
+  },
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "keepWarmHours": {
+      "type": "number",
+      "title": "Keep-warm window (hours)",
+      "description": "How long one press of Keep warm keeps the prompt cache warm.",
+      "default": 2
+    },
+    "cacheLifetime": {
+      "type": "string",
+      "title": "Prompt cache lifetime",
+      "description": "1h for subscriptions (the default). 5m for API-key and cloud-provider sessions.",
+      "default": "1h",
+      "options": ["1h", "5m"]
+    },
+    "summaryRow": {
+      "type": "boolean",
+      "title": "Summary row",
+      "description": "Goal, next step and what waits on you, from one Haiku call after each turn.",
+      "default": true
+    },
+    "headsUp": {
+      "type": "boolean",
+      "title": "Heads-up",
+      "description": "After a long turn, one Haiku call flags up to two things you might miss.",
+      "default": true
+    }
+  }
+}

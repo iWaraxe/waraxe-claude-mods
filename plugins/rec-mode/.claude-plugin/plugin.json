@@ -1,0 +1,9 @@
+{
+  "name": "rec-mode",
+  "version": "0.1.1",
+  "description": "/rec before you record or share your screen: masks keys, personal details and business figures, keeps private files closed, and silences every mod's sounds (spoken-alerts, narrator) until /rec off. A ○/● REC badge shows the state and switches it.",
+  "author": {
+    "name": "Igor Waraxe"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,42 @@
+#!/bin/sh
+# rec: switch rec-mode from outside Claude Code, for a macOS Shortcuts hotkey or a terminal.
+# Every open Claude Code chat with rec-mode follows within 3 seconds, and a mod's sound
+# is checked against this file before it plays.
+#   rec            REC on if it is off, off if it is on
+#   rec on | strict | off
+#   rec status     prints on, strict or off
+set -eu
+
+dir="$HOME/.claude/mods-data/rec-mode"
+flag="$dir/state.json"
+
+current=off
+if [ -f "$flag" ] && grep -q '"on": *true' "$flag"; then
+  if grep -q '"strict": *true' "$flag"; then current=strict; else current=on; fi
+fi
+
+case "${1:-toggle}" in
+  status) echo "$current"; exit 0 ;;
+  toggle) if [ "$current" = off ]; then want=on; else want=off; fi ;;
+  on | strict | off) want="$1" ;;
+  *) echo "usage: rec [on|strict|off|status]" >&2; exit 2 ;;
+esac
+
+mkdir -p "$dir"
+if [ "$want" = off ]; then
+  json='{"on":false,"strict":false,"since":0}'
+  message='REC off: mod sounds are back on'
+else
+  strict=false
+  [ "$want" = strict ] && strict=true
+  json="{\"on\":true,\"strict\":$strict,\"since\":$(date +%s)000}"
+  message='REC on: screen masked, mod sounds off'
+fi
+# Written whole, then moved into place, so a chat never reads half a file.
+printf '%s' "$json" > "$flag.tmp"
+mv "$flag.tmp" "$flag"
+
+echo "REC $want"
+if command -v osascript > /dev/null 2>&1; then
+  osascript -e "display notification \"$message\" with title \"Claude Code\"" > /dev/null 2>&1 || true
+fi

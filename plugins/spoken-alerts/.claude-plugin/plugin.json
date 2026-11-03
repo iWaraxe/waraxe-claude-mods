@@ -1,0 +1,72 @@
+{
+  "name": "spoken-alerts",
+  "version": "0.3.0",
+  "description": "Speaks two alerts with Mac, OpenAI or ElevenLabs voices: when work ends, the project, the thread and what was done; when Claude asks you something, a chime, the question and the recommended option.",
+  "author": {
+    "name": "Igor Waraxe"
+  },
+  "license": "MIT",
+  "userConfig": {
+    "provider": {
+      "type": "string",
+      "title": "Voice provider",
+      "description": "mac speaks with the Mac's own voices (free, offline). openai and elevenlabs need that provider's API key; if the cloud voice fails, the Mac voice speaks.",
+      "default": "mac",
+      "options": [
+        "mac",
+        "openai",
+        "elevenlabs"
+      ]
+    },
+    "macDoneVoice": {
+      "type": "string",
+      "title": "Mac work-done voice",
+      "description": "A Mac voice name, as `say -v '?'` lists them.",
+      "default": "Samantha"
+    },
+    "macQuestionVoice": {
+      "type": "string",
+      "title": "Mac question voice",
+      "description": "A Mac voice name. The Mac voices also speak when a cloud voice fails.",
+      "default": "Daniel"
+    },
+    "openaiDoneVoice": {
+      "type": "string",
+      "title": "OpenAI work-done voice",
+      "description": "alloy, ash, ballad, cedar, coral, echo, fable, marin, nova, onyx, sage, shimmer or verse.",
+      "default": "onyx"
+    },
+    "openaiQuestionVoice": {
+      "type": "string",
+      "title": "OpenAI question voice",
+      "description": "An OpenAI voice name, as for the work-done voice.",
+      "default": "nova"
+    },
+    "openaiApiKey": {
+      "type": "string",
+      "title": "OpenAI API key",
+      "description": "Needed for the openai provider. Kept in secure storage. Empty: OPENAI_API_KEY from the environment, then from ~/.claude/.env.",
+      "sensitive": true,
+      "required": false
+    },
+    "elevenlabsDoneVoice": {
+      "type": "string",
+      "title": "ElevenLabs work-done voice",
+      "description": "A voice ID from your ElevenLabs voice library. The default is the stock voice Sarah.",
+      "default": "EXAVITQu4vr4xnSDxMaL"
+    },
+    "elevenlabsQuestionVoice": {
+      "type": "string",
+      "title": "ElevenLabs question voice",
+      "description": "A voice ID from your ElevenLabs voice library. The default is the stock voice George.",
+      "default": "JBFqnCBsd6RMkjVDRZzb"
+    },
+    "elevenlabsApiKey": {
+      "type": "string",
+      "title": "ElevenLabs API key",
+      "description": "Needed for the elevenlabs provider. Kept in secure storage. Empty: ELEVENLABS_API_KEY from the environment, then from ~/.claude/.env.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

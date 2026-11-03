@@ -1,0 +1,42 @@
+{
+  "name": "waraxe-claude-mods",
+  "owner": {
+    "name": "Igor Waraxe"
+  },
+  "metadata": {
+    "description": "Igor Waraxe's Claude Code mods: a status banner, spoken alerts and a recording mode.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "status-banner",
+      "source": "./plugins/status-banner",
+      "description": "One status banner above the prompt: plan usage, the session's turn, speed, cost, cache countdown with a Keep warm button and context fill, a goal and next-step summary, and a heads-up after long turns.",
+      "version": "0.3.1",
+      "author": {
+        "name": "Igor Waraxe"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "spoken-alerts",
+      "source": "./plugins/spoken-alerts",
+      "description": "Speaks two alerts with Mac, OpenAI or ElevenLabs voices: when work ends, the project, the thread and what was done; when Claude asks you something, a chime, the question and the recommended option.",
+      "version": "0.3.0",
+      "author": {
+        "name": "Igor Waraxe"
+      },
+      "license": "MIT"
+    },
+    {
+      "name": "rec-mode",
+      "source": "./plugins/rec-mode",
+      "description": "/rec before you record or share your screen: masks keys, personal details and business figures, keeps private files closed, and silences every mod's sounds (spoken-alerts, narrator) until /rec off. A \u25cb/\u25cf REC badge shows the state and switches it.",
+      "version": "0.1.1",
+      "author": {
+        "name": "Igor Waraxe"
+      },
+      "license": "MIT"
+    }
+  ]
+}
